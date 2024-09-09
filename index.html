@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="shortcut icon" href="./imagem/chave.gif" type="/gif">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+        <div class="input-group">
+            <label for="password-length">Comprimento da Senha:</label>
+            <input type="number" id="password-length" min="8" max="64" value="12">
+        </div>
+        <button id="generate-btn">Gerar Senha</button>
+        <div class="password-container">
+            <input type="text" id="password" readonly aria-label="Senha gerada">
+            <button id="copy-btn" aria-label="Copiar Senha">📋</button>
+        </div>
+    </div>
+
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
