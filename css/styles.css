@@ -1,37 +1,57 @@
 /* Reset e configuração base */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #5966f8;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Estilização do vídeo de fundo */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 1; /* Vídeo completamente visível */
+}
+
+audio {
+    display: none; /* Esconde o player de música */
+}
+
+/* Container principal */
 .container {
-    background: #cbc4ff;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Transparente para mostrar o vídeo */
+    padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     width: 100%;
     max-width: 500px;
     text-align: center;
+    backdrop-filter: blur(10px); /* Efeito de desfoque no fundo do container */
 }
 
 h1 {
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #333;
 }
 
+/* Estilização do grupo de entrada */
 .input-group {
     margin-bottom: 20px;
 }
@@ -56,6 +76,7 @@ h1 {
     margin: 0 auto;
 }
 
+/* Estilização dos botões */
 button {
     padding: 12px 24px;
     font-size: 1rem;
@@ -76,6 +97,7 @@ button:active {
     transform: scale(0.98);
 }
 
+/* Estilização do campo da senha */
 .password-container {
     display: flex;
     align-items: center;
